@@ -10,16 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var buttonClickMe: UIButton!
-    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var outputLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func onClickMe(_ sender: UIButton) {
-        label1.text = "Hello World!"
+        
     }
     
 }
-
