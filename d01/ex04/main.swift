@@ -51,3 +51,6 @@ print("outs : ")
 print(theDeck.outs)
 print("discards : ")
 print(theDeck.discards)
+
+print(theDeck)
+print(theDeck.description)
