@@ -11,12 +11,10 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableview: UITableView!
-    
-    let list = ["Bob", "Steve", "Jack"]
-    
-    var deathNames: [String] = ["Name 1", "Name 2", "Name 3"]
-    var deathDates: [String] = ["Date 1", "Date 2", "Date 3"]
-    var deathDescriptions: [String] = ["Description 1", "Description 2", "Description 3"]
+      
+    var deathNames: [String] = ["Harry Potter", "Mufasa", "Captain Hook"]
+    var deathDates: [String] = ["3 August 1994 12:00:00", "07 July 1994 13:00:00", "4 November 2001 12:00:01"]
+    var deathDescriptions: [String] = ["Voldemort kills him.", "Killed by his brother.", "Killed by crocodile."]
 
     
     //a list to store DataModel
