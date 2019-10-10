@@ -25,7 +25,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
         //traversing through all elements of the array
         for i in 0..<self.deathNames.count{
             
