@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270D0891234F67260005BD64 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270D0890234F67260005BD64 /* AddViewController.swift */; };
 		276D11D7234F04E200E1663B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D11D6234F04E200E1663B /* TableViewCell.swift */; };
 		276D11D9234F088D00E1663B /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 276D11D8234F088D00E1663B /* DataModel.swift */; };
 		27955E67234E277900ED0F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27955E66234E277900ED0F9D /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270D0890234F67260005BD64 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		276D11D6234F04E200E1663B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		276D11D8234F088D00E1663B /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		27955E63234E277900ED0F9D /* DeathNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeathNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +108,7 @@
 				27955E66234E277900ED0F9D /* AppDelegate.swift */,
 				27955E68234E277900ED0F9D /* SceneDelegate.swift */,
 				27955E6A234E277900ED0F9D /* ViewController.swift */,
+				270D0890234F67260005BD64 /* AddViewController.swift */,
 				27955E6C234E277900ED0F9D /* Main.storyboard */,
 				276D11D8234F088D00E1663B /* DataModel.swift */,
 				276D11D6234F04E200E1663B /* TableViewCell.swift */,
@@ -267,6 +270,7 @@
 			files = (
 				276D11D9234F088D00E1663B /* DataModel.swift in Sources */,
 				27955E6B234E277900ED0F9D /* ViewController.swift in Sources */,
+				270D0891234F67260005BD64 /* AddViewController.swift in Sources */,
 				276D11D7234F04E200E1663B /* TableViewCell.swift in Sources */,
 				27955E67234E277900ED0F9D /* AppDelegate.swift in Sources */,
 				27955E69234E277900ED0F9D /* SceneDelegate.swift in Sources */,

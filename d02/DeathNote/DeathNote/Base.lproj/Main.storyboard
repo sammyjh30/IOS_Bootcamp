@@ -121,57 +121,68 @@
             </objects>
             <point key="canvasLocation" x="1066.4000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="s0I-ci-0D0">
             <objects>
-                <viewController id="IBp-am-hyu" sceneMemberID="viewController">
+                <viewController id="IBp-am-hyu" customClass="AddViewController" customModule="DeathNote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QXY-Dy-LcT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2tI-vf-nn8">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2tI-vf-nn8">
+                                <rect key="frame" x="7" y="51" width="361" height="609"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg3-v7-9Pn">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="37"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg3-v7-9Pn">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WAn-IB-lk0">
-                                        <rect key="frame" x="0.0" y="37" width="375" height="61.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="WAn-IB-lk0">
+                                        <rect key="frame" x="0.0" y="20.5" width="361" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pX9-F4-h7p">
-                                        <rect key="frame" x="0.0" y="98.5" width="375" height="36.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pX9-F4-h7p">
+                                        <rect key="frame" x="0.0" y="62.5" width="361" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Spa-3P-a1w">
-                                        <rect key="frame" x="0.0" y="135" width="375" height="61.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK3-pN-BPU">
-                                        <rect key="frame" x="0.0" y="196.5" width="375" height="37"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="bFu-AB-t0f">
+                                        <rect key="frame" x="0.0" y="83" width="361" height="263.5"/>
+                                        <subviews>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2B-sR-Deu">
+                                                <rect key="frame" x="0.0" y="0.0" width="361" height="263.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK3-pN-BPU">
+                                        <rect key="frame" x="0.0" y="346.5" width="361" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="781-3t-BXt">
-                                        <rect key="frame" x="0.0" y="234" width="375" height="389"/>
+                                        <rect key="frame" x="0.0" y="367" width="361" height="242"/>
                                     </datePicker>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="bFu-AB-t0f" firstAttribute="top" secondItem="2tI-vf-nn8" secondAttribute="top" constant="83" id="XiC-WS-gkT"/>
+                                    <constraint firstAttribute="bottom" secondItem="bFu-AB-t0f" secondAttribute="bottom" constant="262.5" id="iGq-4H-Nvi"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="2tI-vf-nn8" firstAttribute="top" secondItem="Dlz-ex-KLf" secondAttribute="top" id="BiU-1l-y1A"/>
-                            <constraint firstItem="2tI-vf-nn8" firstAttribute="bottom" secondItem="Dlz-ex-KLf" secondAttribute="bottom" id="CwH-Cn-eoR"/>
-                            <constraint firstItem="2tI-vf-nn8" firstAttribute="centerX" secondItem="QXY-Dy-LcT" secondAttribute="centerX" id="G6R-Om-8TO"/>
-                            <constraint firstItem="2tI-vf-nn8" firstAttribute="leading" secondItem="Dlz-ex-KLf" secondAttribute="leading" id="LNU-4R-pS2"/>
+                            <constraint firstItem="2tI-vf-nn8" firstAttribute="centerX" secondItem="QXY-Dy-LcT" secondAttribute="centerX" id="8Ws-ca-nbN"/>
+                            <constraint firstItem="2tI-vf-nn8" firstAttribute="leading" secondItem="Dlz-ex-KLf" secondAttribute="leading" constant="7" id="M3E-lX-y6v"/>
+                            <constraint firstItem="Dlz-ex-KLf" firstAttribute="bottom" secondItem="2tI-vf-nn8" secondAttribute="bottom" constant="7" id="OcJ-qo-Vjd"/>
+                            <constraint firstItem="2tI-vf-nn8" firstAttribute="top" secondItem="Dlz-ex-KLf" secondAttribute="top" constant="7" id="fby-jN-Ds0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dlz-ex-KLf"/>
                     </view>
@@ -181,13 +192,22 @@
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="IBp-am-hyu" eventType="touchDown" id="H13-mp-CLw"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="datePicker" destination="781-3t-BXt" id="LQn-hU-IzI"/>
+                        <outlet property="descriptionTextView" destination="d2B-sR-Deu" id="M2o-Ap-Vv8"/>
+                        <outlet property="nameTextField" destination="WAn-IB-lk0" id="E96-aP-g4N"/>
+                        <outlet property="textDescription" destination="d2B-sR-Deu" id="IEm-Cn-Ogj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chd-rs-oFl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="123"/>
+            <point key="canvasLocation" x="1848.8" y="122.78860569715144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EAu-pQ-794">
