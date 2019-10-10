@@ -24,6 +24,7 @@ class AddViewController: UIViewController {
         } else {
             dataModels.append(DataModel(deathName: nameTextField.text!, deathDate: somedateString, deathDescription: textDescription.text!))
         }
+        _ = navigationController?.popToRootViewController(animated: true)
     }
     
     @IBOutlet weak var nameTextField: UITextField!
