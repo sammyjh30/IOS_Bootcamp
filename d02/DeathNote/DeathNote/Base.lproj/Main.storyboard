@@ -52,7 +52,7 @@
                                                                                 </label>
                                                                             </subviews>
                                                                         </stackView>
-                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-In-rWh">
+                                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Description" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5G-In-rWh">
                                                                             <rect key="frame" x="0.0" y="28.5" width="361" height="33.5"/>
                                                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -132,7 +132,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2tI-vf-nn8">
-                                <rect key="frame" x="0.0" y="44" width="375" height="519.5"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="469.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg3-v7-9Pn">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
@@ -152,13 +152,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="bFu-AB-t0f">
-                                        <rect key="frame" x="0.0" y="83" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="83" width="375" height="150"/>
                                         <subviews>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="d2B-sR-Deu">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="CQg-GK-xz6"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="kg1-ob-M4W"/>
                                                 </constraints>
                                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -167,18 +166,18 @@
                                             </textView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="PYf-1G-AHL"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="0Bb-Wo-2YT"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="Ulo-FX-9yT"/>
                                         </constraints>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vK3-pN-BPU">
-                                        <rect key="frame" x="0.0" y="283" width="375" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="233" width="375" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="781-3t-BXt">
-                                        <rect key="frame" x="0.0" y="303.5" width="375" height="216"/>
+                                        <rect key="frame" x="0.0" y="253.5" width="375" height="216"/>
                                     </datePicker>
                                 </subviews>
                                 <constraints>
@@ -191,10 +190,9 @@
                         <constraints>
                             <constraint firstItem="2tI-vf-nn8" firstAttribute="leading" secondItem="QXY-Dy-LcT" secondAttribute="leading" id="4xx-Pp-bcr"/>
                             <constraint firstAttribute="trailing" secondItem="2tI-vf-nn8" secondAttribute="trailing" id="Jif-mh-wwz"/>
-                            <constraint firstItem="Dlz-ex-KLf" firstAttribute="bottom" secondItem="2tI-vf-nn8" secondAttribute="bottom" id="ZHm-EW-WDL"/>
                             <constraint firstItem="2tI-vf-nn8" firstAttribute="top" secondItem="Dlz-ex-KLf" secondAttribute="top" id="cDp-8d-bbD"/>
                             <constraint firstItem="2tI-vf-nn8" firstAttribute="centerX" secondItem="QXY-Dy-LcT" secondAttribute="centerX" id="gDP-ER-JbR"/>
-                            <constraint firstItem="2tI-vf-nn8" firstAttribute="centerY" secondItem="QXY-Dy-LcT" secondAttribute="centerY" id="wk6-ds-8eQ"/>
+                            <constraint firstAttribute="bottom" secondItem="2tI-vf-nn8" secondAttribute="bottom" id="qrv-W9-kPX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dlz-ex-KLf"/>
                     </view>
