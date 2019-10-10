@@ -14,9 +14,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     let list = ["Bob", "Steve", "Jack"]
     
-    var deathNames: [String] = ["Name 1", "Name 2", "Name 3", "Name 4"]
-    var deathDates: [String] = ["Date 1", "Date 2", "Date 3", "Date 4"]
-    var deathDescriptions: [String] = ["Description 1", "Description 2", "Description 3", "Description 4"]
+    var deathNames: [String] = ["Name 1", "Name 2", "Name 3"]
+    var deathDates: [String] = ["Date 1", "Date 2", "Date 3"]
+    var deathDescriptions: [String] = ["Description 1", "Description 2", "Description 3"]
 
     
     //a list to store DataModel
@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view, typically from a nib.
         
         //traversing through all elements of the array
-        for i in 0..<4{
+        for i in 0..<self.deathNames.count{
             
             self.dataModels.append(DataModel(deathName: deathNames[i], deathDate: deathDates[i], deathDescription: deathDescriptions[i]))
             //displaying data in tableview
