@@ -12,8 +12,8 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var deathName: UILabel!
     @IBOutlet weak var deathDate: UILabel!
-    @IBOutlet weak var deathDescription: UILabel!
-        
+    @IBOutlet weak var deathDescription: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

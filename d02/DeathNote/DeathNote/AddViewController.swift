@@ -17,8 +17,13 @@ class AddViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM YYYY HH:mm"
         let somedateString = dateFormatter.string(from: datePicker.date)
-
         print (somedateString)
+        
+        if nameTextField.text?.isEmpty ?? true {
+            print("nameTextField is empty")
+        } else {
+            dataModels.append(DataModel(deathName: nameTextField.text!, deathDate: somedateString, deathDescription: textDescription.text!))
+        }
     }
     
     @IBOutlet weak var nameTextField: UITextField!

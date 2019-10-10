@@ -8,6 +8,9 @@
 
 import UIKit
 
+//a list to store DataModel
+var dataModels = [DataModel]()
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableview: UITableView!
@@ -16,20 +19,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var deathDates: [String] = ["3 August 1994 12:00:00", "07 July 1994 13:00:00", "4 November 2001 12:00:01"]
     var deathDescriptions: [String] = ["Voldemort kills him.", "Killed by his brother.", "Killed by crocodile."]
 
-    
-    //a list to store DataModel
-    var dataModels = [DataModel]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //traversing through all elements of the array
-        for i in 0..<self.deathNames.count{
-            
-            self.dataModels.append(DataModel(deathName: deathNames[i], deathDate: deathDates[i], deathDescription: deathDescriptions[i]))
-            //displaying data in tableview
-            self.tableview.reloadData()
-            
+        if dataModels.isEmpty {
+            for i in 0..<self.deathNames.count{
+                
+                dataModels.append(DataModel(deathName: deathNames[i], deathDate: deathDates[i], deathDescription: deathDescriptions[i]))
+                //displaying data in tableview
+                self.tableview.reloadData()
+                
+            }
         }
         
     }
