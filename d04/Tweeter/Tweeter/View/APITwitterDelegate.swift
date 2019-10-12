@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol APITwitterDelegate {
+protocol APITwitterDelegate: AnyObject {
     //https://docs.swift.org/swift-book/LanguageGuide/Protocols.html
     func listener(tweet: [Tweet])
     func NSExceptionErr(err: NSError)
