@@ -18,6 +18,8 @@
 		27C5E8D32352438700E32B1A /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C5E8D22352438700E32B1A /* Tweet.swift */; };
 		27C5E8D52352471D00E32B1A /* APITwitterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C5E8D42352471D00E32B1A /* APITwitterDelegate.swift */; };
 		27C5E8D72352493A00E32B1A /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C5E8D62352493A00E32B1A /* APIController.swift */; };
+		27C5E8D9235257AA00E32B1A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C5E8D8235257AA00E32B1A /* TableViewController.swift */; };
+		27C5E8DB23525B7700E32B1A /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C5E8DA23525B7700E32B1A /* TweetCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		27C5E8D22352438700E32B1A /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		27C5E8D42352471D00E32B1A /* APITwitterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITwitterDelegate.swift; sourceTree = "<group>"; };
 		27C5E8D62352493A00E32B1A /* APIController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		27C5E8D8235257AA00E32B1A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		27C5E8DA23525B7700E32B1A /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				27C5E8D22352438700E32B1A /* Tweet.swift */,
+				27C5E8DA23525B7700E32B1A /* TweetCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 		27C5E8D02352403B00E32B1A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				27C5E8D8235257AA00E32B1A /* TableViewController.swift */,
 				27C5E8D62352493A00E32B1A /* APIController.swift */,
 			);
 			path = Controller;
@@ -293,7 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C5E8A423523E3B00E32B1A /* ViewController.swift in Sources */,
+				27C5E8D9235257AA00E32B1A /* TableViewController.swift in Sources */,
 				27C5E8A023523E3B00E32B1A /* AppDelegate.swift in Sources */,
+				27C5E8DB23525B7700E32B1A /* TweetCell.swift in Sources */,
 				27C5E8D72352493A00E32B1A /* APIController.swift in Sources */,
 				27C5E8A223523E3B00E32B1A /* SceneDelegate.swift in Sources */,
 				27C5E8D52352471D00E32B1A /* APITwitterDelegate.swift in Sources */,

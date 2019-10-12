@@ -33,6 +33,9 @@ class APIController {
                         print("statusCode: \(response.statusCode)")
                     }
                     if let data = data {
+                    //For error
+//                    if var data = data {
+//                        data=data.base64EncodedData()
             //           print("data: \(dataString)")
                         do {
                             var tweets: [Tweet] = []
@@ -50,7 +53,7 @@ class APIController {
                             self.delegate?.listener(tweet: tweets)
                             print("Number of results: \(count)")
                         } catch let err {
-                            print(err)
+                            self.delegate?.NSExceptionErr(err: err as NSError)
                         }
                     }
                 }
