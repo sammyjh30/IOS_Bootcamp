@@ -32,6 +32,16 @@ class SecondViewController: UIViewController {
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
-    
+    @IBAction func mapTypeSegmentSelected(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            mapView.mapType = .standard
+        case 1:
+            mapView.mapType = .satellite
+        default:
+            mapView.mapType = .hybrid
+        }
+    }
+        
 }
 
