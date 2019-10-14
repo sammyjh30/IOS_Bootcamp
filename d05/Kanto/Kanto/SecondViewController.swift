@@ -9,10 +9,11 @@
 import UIKit
 import MapKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController,CLLocationManagerDelegate,MKMapViewDelegate {
     //https://www.raywenderlich.com/548-mapkit-tutorial-getting-started
     
     @IBOutlet weak var mapView: MKMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,6 +25,50 @@ class SecondViewController: UIViewController {
                           coordinate: CLLocationCoordinate2D(latitude: 48.896724, longitude: 2.318504))
         mapView.addAnnotation(ecole42)
     }
+    
+    let locationManager = CLLocationManager()
+    
+    @IBAction func onGeoLocButtonPress(_ sender: Any) {
+        self.locationManager.requestAlwaysAuthorization()
+
+        // For use in foreground
+        self.locationManager.requestWhenInUseAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+
+        mapView.delegate = self
+        mapView.mapType = .standard
+        mapView.isZoomEnabled = true
+        mapView.isScrollEnabled = true
+
+        if let coor = mapView.userLocation.location?.coordinate{
+            mapView.setCenter(coor, animated: true)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
+
+        mapView.mapType = MKMapType.standard
+
+//        https://stackoverflow.com/questions/25449469/show-current-location-and-update-location-in-mkmapview-in-swift
+//        let span = MKCoordinateSpanMake(0.05, 0.05)
+//        let region = MKCoordinateRegion(center: locValue, span: span)
+//        mapView.setRegion(region, animated: true)
+
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = locValue
+        annotation.title = "Javed Multani"
+        annotation.subtitle = "current location"
+        mapView.addAnnotation(annotation)
+
+        //centerMap(locValue)
+    }
+    
     
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
@@ -42,6 +87,7 @@ class SecondViewController: UIViewController {
             mapView.mapType = .hybrid
         }
     }
-        
 }
+
+
 
