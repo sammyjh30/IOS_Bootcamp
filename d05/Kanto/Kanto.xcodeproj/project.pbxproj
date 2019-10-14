@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		27E53DC1235477CC00C56FFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DC0235477CC00C56FFD /* AppDelegate.swift */; };
+		27E53DC3235477CC00C56FFD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DC2235477CC00C56FFD /* SceneDelegate.swift */; };
+		27E53DC5235477CC00C56FFD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DC4235477CC00C56FFD /* FirstViewController.swift */; };
+		27E53DC7235477CC00C56FFD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DC6235477CC00C56FFD /* SecondViewController.swift */; };
+		27E53DCA235477CC00C56FFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E53DC8235477CC00C56FFD /* Main.storyboard */; };
+		27E53DCC235477DC00C56FFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27E53DCB235477DC00C56FFD /* Assets.xcassets */; };
+		27E53DCF235477DC00C56FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E53DCD235477DC00C56FFD /* LaunchScreen.storyboard */; };
+		27E53DDA235477DC00C56FFD /* KantoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DD9235477DC00C56FFD /* KantoTests.swift */; };
+		27E53DE5235477DC00C56FFD /* KantoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DE4235477DC00C56FFD /* KantoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		27E53DD6235477DC00C56FFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27E53DB5235477CB00C56FFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E53DBC235477CC00C56FFD;
+			remoteInfo = Kanto;
+		};
+		27E53DE1235477DC00C56FFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27E53DB5235477CB00C56FFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27E53DBC235477CC00C56FFD;
+			remoteInfo = Kanto;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		27E53DBD235477CC00C56FFD /* Kanto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kanto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E53DC0235477CC00C56FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		27E53DC2235477CC00C56FFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		27E53DC4235477CC00C56FFD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		27E53DC6235477CC00C56FFD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		27E53DC9235477CC00C56FFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		27E53DCB235477DC00C56FFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		27E53DCE235477DC00C56FFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		27E53DD0235477DC00C56FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E53DD5235477DC00C56FFD /* KantoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KantoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E53DD9235477DC00C56FFD /* KantoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoTests.swift; sourceTree = "<group>"; };
+		27E53DDB235477DC00C56FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E53DE0235477DC00C56FFD /* KantoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KantoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27E53DE4235477DC00C56FFD /* KantoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoUITests.swift; sourceTree = "<group>"; };
+		27E53DE6235477DC00C56FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		27E53DBA235477CC00C56FFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E53DD2235477DC00C56FFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E53DDD235477DC00C56FFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27E53DB4235477CB00C56FFD = {
+			isa = PBXGroup;
+			children = (
+				27E53DBF235477CC00C56FFD /* Kanto */,
+				27E53DD8235477DC00C56FFD /* KantoTests */,
+				27E53DE3235477DC00C56FFD /* KantoUITests */,
+				27E53DBE235477CC00C56FFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		27E53DBE235477CC00C56FFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27E53DBD235477CC00C56FFD /* Kanto.app */,
+				27E53DD5235477DC00C56FFD /* KantoTests.xctest */,
+				27E53DE0235477DC00C56FFD /* KantoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		27E53DBF235477CC00C56FFD /* Kanto */ = {
+			isa = PBXGroup;
+			children = (
+				27E53DC0235477CC00C56FFD /* AppDelegate.swift */,
+				27E53DC2235477CC00C56FFD /* SceneDelegate.swift */,
+				27E53DC4235477CC00C56FFD /* FirstViewController.swift */,
+				27E53DC6235477CC00C56FFD /* SecondViewController.swift */,
+				27E53DC8235477CC00C56FFD /* Main.storyboard */,
+				27E53DCB235477DC00C56FFD /* Assets.xcassets */,
+				27E53DCD235477DC00C56FFD /* LaunchScreen.storyboard */,
+				27E53DD0235477DC00C56FFD /* Info.plist */,
+			);
+			path = Kanto;
+			sourceTree = "<group>";
+		};
+		27E53DD8235477DC00C56FFD /* KantoTests */ = {
+			isa = PBXGroup;
+			children = (
+				27E53DD9235477DC00C56FFD /* KantoTests.swift */,
+				27E53DDB235477DC00C56FFD /* Info.plist */,
+			);
+			path = KantoTests;
+			sourceTree = "<group>";
+		};
+		27E53DE3235477DC00C56FFD /* KantoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				27E53DE4235477DC00C56FFD /* KantoUITests.swift */,
+				27E53DE6235477DC00C56FFD /* Info.plist */,
+			);
+			path = KantoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		27E53DBC235477CC00C56FFD /* Kanto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E53DE9235477DC00C56FFD /* Build configuration list for PBXNativeTarget "Kanto" */;
+			buildPhases = (
+				27E53DB9235477CC00C56FFD /* Sources */,
+				27E53DBA235477CC00C56FFD /* Frameworks */,
+				27E53DBB235477CC00C56FFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kanto;
+			productName = Kanto;
+			productReference = 27E53DBD235477CC00C56FFD /* Kanto.app */;
+			productType = "com.apple.product-type.application";
+		};
+		27E53DD4235477DC00C56FFD /* KantoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E53DEC235477DC00C56FFD /* Build configuration list for PBXNativeTarget "KantoTests" */;
+			buildPhases = (
+				27E53DD1235477DC00C56FFD /* Sources */,
+				27E53DD2235477DC00C56FFD /* Frameworks */,
+				27E53DD3235477DC00C56FFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27E53DD7235477DC00C56FFD /* PBXTargetDependency */,
+			);
+			name = KantoTests;
+			productName = KantoTests;
+			productReference = 27E53DD5235477DC00C56FFD /* KantoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		27E53DDF235477DC00C56FFD /* KantoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27E53DEF235477DC00C56FFD /* Build configuration list for PBXNativeTarget "KantoUITests" */;
+			buildPhases = (
+				27E53DDC235477DC00C56FFD /* Sources */,
+				27E53DDD235477DC00C56FFD /* Frameworks */,
+				27E53DDE235477DC00C56FFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27E53DE2235477DC00C56FFD /* PBXTargetDependency */,
+			);
+			name = KantoUITests;
+			productName = KantoUITests;
+			productReference = 27E53DE0235477DC00C56FFD /* KantoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		27E53DB5235477CB00C56FFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Samantha Hillebrand";
+				TargetAttributes = {
+					27E53DBC235477CC00C56FFD = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					27E53DD4235477DC00C56FFD = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 27E53DBC235477CC00C56FFD;
+					};
+					27E53DDF235477DC00C56FFD = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 27E53DBC235477CC00C56FFD;
+					};
+				};
+			};
+			buildConfigurationList = 27E53DB8235477CB00C56FFD /* Build configuration list for PBXProject "Kanto" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 27E53DB4235477CB00C56FFD;
+			productRefGroup = 27E53DBE235477CC00C56FFD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				27E53DBC235477CC00C56FFD /* Kanto */,
+				27E53DD4235477DC00C56FFD /* KantoTests */,
+				27E53DDF235477DC00C56FFD /* KantoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		27E53DBB235477CC00C56FFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E53DCF235477DC00C56FFD /* LaunchScreen.storyboard in Resources */,
+				27E53DCC235477DC00C56FFD /* Assets.xcassets in Resources */,
+				27E53DCA235477CC00C56FFD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E53DD3235477DC00C56FFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E53DDE235477DC00C56FFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		27E53DB9235477CC00C56FFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E53DC7235477CC00C56FFD /* SecondViewController.swift in Sources */,
+				27E53DC5235477CC00C56FFD /* FirstViewController.swift in Sources */,
+				27E53DC1235477CC00C56FFD /* AppDelegate.swift in Sources */,
+				27E53DC3235477CC00C56FFD /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E53DD1235477DC00C56FFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E53DDA235477DC00C56FFD /* KantoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27E53DDC235477DC00C56FFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27E53DE5235477DC00C56FFD /* KantoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27E53DD7235477DC00C56FFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27E53DBC235477CC00C56FFD /* Kanto */;
+			targetProxy = 27E53DD6235477DC00C56FFD /* PBXContainerItemProxy */;
+		};
+		27E53DE2235477DC00C56FFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27E53DBC235477CC00C56FFD /* Kanto */;
+			targetProxy = 27E53DE1235477DC00C56FFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		27E53DC8235477CC00C56FFD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27E53DC9235477CC00C56FFD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		27E53DCD235477DC00C56FFD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				27E53DCE235477DC00C56FFD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		27E53DE7235477DC00C56FFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		27E53DE8235477DC00C56FFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		27E53DEA235477DC00C56FFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Kanto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.day05.Kanto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		27E53DEB235477DC00C56FFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Kanto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.day05.Kanto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		27E53DED235477DC00C56FFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KantoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.day05.KantoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanto.app/Kanto";
+			};
+			name = Debug;
+		};
+		27E53DEE235477DC00C56FFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KantoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.day05.KantoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kanto.app/Kanto";
+			};
+			name = Release;
+		};
+		27E53DF0235477DC00C56FFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KantoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.day05.KantoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kanto;
+			};
+			name = Debug;
+		};
+		27E53DF1235477DC00C56FFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KantoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.day05.KantoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Kanto;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		27E53DB8235477CB00C56FFD /* Build configuration list for PBXProject "Kanto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E53DE7235477DC00C56FFD /* Debug */,
+				27E53DE8235477DC00C56FFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E53DE9235477DC00C56FFD /* Build configuration list for PBXNativeTarget "Kanto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E53DEA235477DC00C56FFD /* Debug */,
+				27E53DEB235477DC00C56FFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E53DEC235477DC00C56FFD /* Build configuration list for PBXNativeTarget "KantoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E53DED235477DC00C56FFD /* Debug */,
+				27E53DEE235477DC00C56FFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27E53DEF235477DC00C56FFD /* Build configuration list for PBXNativeTarget "KantoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27E53DF0235477DC00C56FFD /* Debug */,
+				27E53DF1235477DC00C56FFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 27E53DB5235477CB00C56FFD /* Project object */;
+}
