@@ -12,7 +12,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBOutlet weak var tableView: UITableView!
     
-    let transportItems = ["WeThinkCode_","Waterfront","Canal Walk","Seapoint","Camps Bay","Howard Centre"]
+    let transportItems = ["Ecole 42", "WeThinkCode_","Waterfront","Canal Walk","Seapoint","Camps Bay","Howard Centre"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

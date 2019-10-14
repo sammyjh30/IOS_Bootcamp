@@ -16,6 +16,7 @@
 		27E53DCF235477DC00C56FFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27E53DCD235477DC00C56FFD /* LaunchScreen.storyboard */; };
 		27E53DDA235477DC00C56FFD /* KantoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DD9235477DC00C56FFD /* KantoTests.swift */; };
 		27E53DE5235477DC00C56FFD /* KantoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DE4235477DC00C56FFD /* KantoUITests.swift */; };
+		27E53DF32354B72F00C56FFD /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E53DF22354B72F00C56FFD /* Pin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		27E53DE0235477DC00C56FFD /* KantoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KantoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E53DE4235477DC00C56FFD /* KantoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KantoUITests.swift; sourceTree = "<group>"; };
 		27E53DE6235477DC00C56FFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27E53DF22354B72F00C56FFD /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		27E53DBF235477CC00C56FFD /* Kanto */ = {
 			isa = PBXGroup;
 			children = (
+				27E53DF22354B72F00C56FFD /* Pin.swift */,
 				27E53DC0235477CC00C56FFD /* AppDelegate.swift */,
 				27E53DC2235477CC00C56FFD /* SceneDelegate.swift */,
 				27E53DC4235477CC00C56FFD /* FirstViewController.swift */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27E53DF32354B72F00C56FFD /* Pin.swift in Sources */,
 				27E53DC7235477CC00C56FFD /* SecondViewController.swift in Sources */,
 				27E53DC5235477CC00C56FFD /* FirstViewController.swift in Sources */,
 				27E53DC1235477CC00C56FFD /* AppDelegate.swift in Sources */,
