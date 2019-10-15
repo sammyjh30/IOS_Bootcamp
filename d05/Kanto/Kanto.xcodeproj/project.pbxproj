@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		270018D42355AC3D00217EF0 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		271CBE882354DAD900B2F986 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		27E53DBD235477CC00C56FFD /* Kanto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kanto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27E53DC0235477CC00C56FFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +106,7 @@
 		27E53DBF235477CC00C56FFD /* Kanto */ = {
 			isa = PBXGroup;
 			children = (
+				270018D42355AC3D00217EF0 /* Location.gpx */,
 				27E53DF22354B72F00C56FFD /* Pin.swift */,
 				27E53DC0235477CC00C56FFD /* AppDelegate.swift */,
 				27E53DC2235477CC00C56FFD /* SceneDelegate.swift */,

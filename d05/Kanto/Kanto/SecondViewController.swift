@@ -26,49 +26,34 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate,MKMapView
         mapView.addAnnotation(ecole42)
     }
     
-    let locationManager = CLLocationManager()
-    
-    @IBAction func onGeoLocButtonPress(_ sender: Any) {
-        self.locationManager.requestAlwaysAuthorization()
+    var locationManager: CLLocationManager!
+    private var currentLocation: CLLocation?
 
-        // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
+    @IBAction func onGeoLocButtonPress(_ sender: Any) {
+        locationManager = CLLocationManager()
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                
+        // Check for Location Services
 
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestWhenInUseAuthorization()
             locationManager.startUpdatingLocation()
-        }
-
-        mapView.delegate = self
-        mapView.mapType = .standard
-        mapView.isZoomEnabled = true
-        mapView.isScrollEnabled = true
-
-        if let coor = mapView.userLocation.location?.coordinate{
-            mapView.setCenter(coor, animated: true)
         }
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-
-        mapView.mapType = MKMapType.standard
-
-//        https://stackoverflow.com/questions/25449469/show-current-location-and-update-location-in-mkmapview-in-swift
-//        let span = MKCoordinateSpanMake(0.05, 0.05)
-//        let region = MKCoordinateRegion(center: locValue, span: span)
-//        mapView.setRegion(region, animated: true)
-
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = locValue
-        annotation.title = "Javed Multani"
-        annotation.subtitle = "current location"
-        mapView.addAnnotation(annotation)
-
-        //centerMap(locValue)
+        defer { currentLocation = locations.last }
+        if currentLocation == nil {
+            // Zoom to user location
+            if let userLocation = locations.last {
+                let viewRegion = MKCoordinateRegion(center: userLocation.coordinate, latitudinalMeters: 2000, longitudinalMeters: 2000)
+                mapView.setRegion(viewRegion, animated: false)
+            }
+        }
+        //https://stackoverflow.com/questions/25449469/show-current-location-and-update-location-in-mkmapview-in-swift
+//        https://stackoverflow.com/a/17164233
     }
-    
     
     let regionRadius: CLLocationDistance = 1000
     func centerMapOnLocation(location: CLLocation) {
