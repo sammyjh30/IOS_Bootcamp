@@ -13,17 +13,25 @@ class SecondViewController: UIViewController,CLLocationManagerDelegate,MKMapView
     //https://www.raywenderlich.com/548-mapkit-tutorial-getting-started
     
     @IBOutlet weak var mapView: MKMapView!
+    var initialLocation: CLLocation!
+    var pin: Pin!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let initialLocation = CLLocation(latitude: 48.896724, longitude: 2.318504)
+        initialLocation = CLLocation(latitude: 48.896724, longitude: 2.318504)
         centerMapOnLocation(location: initialLocation)
-        let ecole42 = Pin(title: "Ecole 42",
+        pin = Pin(title: "Ecole 42",
                           locationName: "96 Boulevard Bessières, 75017 Paris, France",
                           discipline: "Coding School",
                           coordinate: CLLocationCoordinate2D(latitude: 48.896724, longitude: 2.318504))
-        mapView.addAnnotation(ecole42)
+        mapView.addAnnotation(pin)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        centerMapOnLocation(location: initialLocation)
+        mapView.addAnnotation(pin)
     }
     
     var locationManager: CLLocationManager!
