@@ -12,14 +12,15 @@ class ShapeView: UIView {
     //https://www.weheartswift.com/bezier-paths-gesture-recognizers/
     let size: CGFloat = 100.0
     let lineWidth: CGFloat = 3
+    var fillColor: UIColor!
     
     init(origin: CGPoint){
         super.init(frame: CGRect(x: 0.0, y: 0.0, width: size, height: size))
         self.center = origin
         self.backgroundColor = UIColor.clear
+        self.fillColor = randomColor()
         
         initGestureRecognizers()
-        
     }
     
     func initGestureRecognizers() {
@@ -28,6 +29,9 @@ class ShapeView: UIView {
         
         let pinchGR = UIPinchGestureRecognizer(target: self, action: #selector(ShapeView.didPinch))
         addGestureRecognizer(pinchGR)
+        
+        let rotationGR = UIRotationGestureRecognizer(target: self, action: #selector(ShapeView.didRotate))
+        addGestureRecognizer(rotationGR)
     }
     
     @objc func didPan(panGR: UIPanGestureRecognizer) {
@@ -35,6 +39,8 @@ class ShapeView: UIView {
         self.superview!.bringSubviewToFront(self)
         
         var translation = panGR.translation(in: self)
+        
+        translation = translation.applying(self.transform)
         
         self.center.x += translation.x
         self.center.y += translation.y
@@ -53,7 +59,7 @@ class ShapeView: UIView {
         let path = UIBezierPath(roundedRect: insetRect, cornerRadius: 10)
         
         
-        UIColor.red.setFill()
+        self.fillColor.setFill()
         path.fill()
         
         path.lineWidth = self.lineWidth
@@ -67,5 +73,19 @@ class ShapeView: UIView {
         let scale = pinchGR.scale
         self.transform = self.transform.scaledBy(x: scale, y: scale)
         pinchGR.scale = 1.0
+    }
+    
+    //Rotation is given in radians.
+    @objc func didRotate(rotationGR: UIRotationGestureRecognizer) {
+        self.superview!.bringSubviewToFront(self)
+        let rotation = rotationGR.rotation
+        self.transform = self.transform.rotated(by: rotation)
+        rotationGR.rotation = 0.0
+    }
+    
+    func randomColor() -> UIColor {
+        let hue:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        return UIColor(hue: hue, saturation: 0.8, brightness: 1.0, alpha: 0.8)
+        
     }
 }
