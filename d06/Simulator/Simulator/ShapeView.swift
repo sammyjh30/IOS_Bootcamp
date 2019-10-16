@@ -15,12 +15,18 @@ class ShapeView: UIView {
     var fillColor: UIColor!
     var path: UIBezierPath!
     
-    init(origin: CGPoint){
+    var gravity: UIGravityBehavior!
+    var collision: UICollisionBehavior!
+    
+    
+    init(origin: CGPoint, gravity: UIGravityBehavior, collision: UICollisionBehavior){
         super.init(frame: CGRect(x: 0.0, y: 0.0, width: size, height: size))
         self.center = origin
         self.backgroundColor = UIColor.clear
         self.fillColor = randomColor()
         self.path = randomPath()
+        self.gravity = gravity
+        self.collision = collision
 
         
         initGestureRecognizers()
@@ -49,6 +55,9 @@ class ShapeView: UIView {
         self.center.y += translation.y
         
         panGR.setTranslation(CGPoint.zero, in: self)
+        gravity.addItem(self)
+        collision.addItem(self)
+        
     }
     
     // We need to implement init(coder) to avoid compilation errors
