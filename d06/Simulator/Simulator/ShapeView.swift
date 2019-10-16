@@ -15,19 +15,27 @@ class ShapeView: UIView {
     var fillColor: UIColor!
     var path: UIBezierPath!
     
+    var animator: UIDynamicAnimator!
     var gravity: UIGravityBehavior!
     var collision: UICollisionBehavior!
+    var behaviour: UIDynamicItemBehavior!
+    var originalBounds: CGRect!;
     
     
-    init(origin: CGPoint, gravity: UIGravityBehavior, collision: UICollisionBehavior){
+    
+    init(origin: CGPoint, animator: UIDynamicAnimator, gravity: UIGravityBehavior, collision: UICollisionBehavior, behaviour: UIDynamicItemBehavior){
         super.init(frame: CGRect(x: 0.0, y: 0.0, width: size, height: size))
         self.center = origin
         self.backgroundColor = UIColor.clear
         self.fillColor = randomColor()
         self.path = randomPath()
+        self.animator = animator
         self.gravity = gravity
         self.collision = collision
-
+        self.behaviour = behaviour
+        
+        self.originalBounds = CGRect(x: 0.0, y: 0.0, width: size, height: size)
+        
         
         initGestureRecognizers()
     }
@@ -44,19 +52,18 @@ class ShapeView: UIView {
     }
     
     @objc func didPan(panGR: UIPanGestureRecognizer) {
-        
-        self.superview!.bringSubviewToFront(self)
-        
-        var translation = panGR.translation(in: self)
-        
-        translation = translation.applying(self.transform)
-        
-        self.center.x += translation.x
-        self.center.y += translation.y
-        
-        panGR.setTranslation(CGPoint.zero, in: self)
-        gravity.addItem(self)
-        collision.addItem(self)
+      
+        switch panGR.state {
+        case .began:
+            self.gravity?.removeItem(panGR.view!);
+        case .changed:
+            panGR.view?.center = panGR.location(in: self.superview);
+            self.animator?.updateItem(usingCurrentState: panGR.view!);
+        case .ended:
+            self.gravity?.addItem(panGR.view!);
+        default:
+            break ;
+        }
         
     }
     
@@ -66,11 +73,6 @@ class ShapeView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-//        let insetRect = rect.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
-        
-//        let path = UIBezierPath(roundedRect: insetRect, cornerRadius: 10)
-        
-        
         self.fillColor.setFill()
         self.path.fill()
         
@@ -81,18 +83,48 @@ class ShapeView: UIView {
     
     
     @objc func didPinch(pinchGR: UIPinchGestureRecognizer) {
-        self.superview!.bringSubviewToFront(self)
-        let scale = pinchGR.scale
-        self.transform = self.transform.scaledBy(x: scale, y: scale)
-        pinchGR.scale = 1.0
+         let view = pinchGR.view as! ShapeView;
+        
+        switch pinchGR.state {
+        case .began:
+            self.gravity?.removeItem(view);
+        case .changed:
+            self.collision.removeItem(view);
+            self.behaviour.removeItem(view);
+            view.bounds.size.width = view.originalBounds.width * pinchGR.scale;
+            view.bounds.size.height = view.originalBounds.height * pinchGR.scale;
+            self.collision.addItem(view);
+            self.behaviour.addItem(view);
+            self.animator?.updateItem(usingCurrentState: view);
+        case .ended:
+            view.originalBounds = view.bounds;
+            self.gravity?.addItem(view);
+        default:
+            break ;
+        }
     }
     
     //Rotation is given in radians.
     @objc func didRotate(rotationGR: UIRotationGestureRecognizer) {
-        self.superview!.bringSubviewToFront(self)
-        let rotation = rotationGR.rotation
-        self.transform = self.transform.rotated(by: rotation)
-        rotationGR.rotation = 0.0
+     //https://stackoverflow.com/questions/46919158/moving-an-object-uiview-in-swift-with-gravity-collision-elasticity-already-set
+       
+        switch rotationGR.state {
+        case .began:
+            self.gravity.removeItem(rotationGR.view!);
+        case .changed:
+            self.collision.removeItem(rotationGR.view!);
+            self.behaviour.removeItem(rotationGR.view!);
+            rotationGR.view!.transform = rotationGR.view!.transform.rotated(by: rotationGR.rotation);
+            rotationGR.rotation = 0;
+            self.collision.addItem(rotationGR.view!);
+            self.behaviour.addItem(rotationGR.view!);
+            self.animator?.updateItem(usingCurrentState: rotationGR.view!);
+        case .ended:
+            self.gravity?.addItem(rotationGR.view!);
+        default:
+            break ;
+        }
+        
     }
     
     func randomColor() -> UIColor {
@@ -115,12 +147,12 @@ class ShapeView: UIView {
     
     func trianglePathInRect(rect:CGRect) -> UIBezierPath {
         let path = UIBezierPath()
-
+        
         path.move(to: CGPoint(x: rect.width / 2.0, y: rect.origin.y))
         path.addLine(to: CGPoint(x: rect.width,y: rect.height))
         path.addLine(to: CGPoint(x: rect.origin.x,y: rect.height))
         path.close()
-
+        
         return path
     }
     
