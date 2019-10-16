@@ -13,12 +13,15 @@ class ShapeView: UIView {
     let size: CGFloat = 100.0
     let lineWidth: CGFloat = 3
     var fillColor: UIColor!
+    var path: UIBezierPath!
     
     init(origin: CGPoint){
         super.init(frame: CGRect(x: 0.0, y: 0.0, width: size, height: size))
         self.center = origin
         self.backgroundColor = UIColor.clear
         self.fillColor = randomColor()
+        self.path = randomPath()
+
         
         initGestureRecognizers()
     }
@@ -54,17 +57,17 @@ class ShapeView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        let insetRect = rect.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
+//        let insetRect = rect.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
         
-        let path = UIBezierPath(roundedRect: insetRect, cornerRadius: 10)
+//        let path = UIBezierPath(roundedRect: insetRect, cornerRadius: 10)
         
         
         self.fillColor.setFill()
-        path.fill()
+        self.path.fill()
         
-        path.lineWidth = self.lineWidth
+        self.path.lineWidth = self.lineWidth
         UIColor.black.setStroke()
-        path.stroke()
+        self.path.stroke()
     }
     
     
@@ -86,6 +89,30 @@ class ShapeView: UIView {
     func randomColor() -> UIColor {
         let hue:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         return UIColor(hue: hue, saturation: 0.8, brightness: 1.0, alpha: 0.8)
-        
     }
+    
+    func randomPath() -> UIBezierPath {
+        let insetRect = self.bounds.insetBy(dx: lineWidth, dy: lineWidth)
+        let shapeType = arc4random() % 3
+        
+        if shapeType == 0 {
+            return UIBezierPath(roundedRect: insetRect, cornerRadius: 10.0)
+        }
+        if shapeType == 1 {
+            return UIBezierPath(ovalIn: insetRect)
+        }
+        return trianglePathInRect(rect: insetRect)
+    }
+    
+    func trianglePathInRect(rect:CGRect) -> UIBezierPath {
+        let path = UIBezierPath()
+
+        path.move(to: CGPoint(x: rect.width / 2.0, y: rect.origin.y))
+        path.addLine(to: CGPoint(x: rect.width,y: rect.height))
+        path.addLine(to: CGPoint(x: rect.origin.x,y: rect.height))
+        path.close()
+
+        return path
+    }
+    
 }
